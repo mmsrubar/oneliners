@@ -43,3 +43,5 @@ smbclient //192.168.193.211/WorkSharing -N
 # smbget: Recursively download files from an SMB share
 smbget -R smb://10.10.15.147/anonymous
 
+# nmap: -sL will simply list targets that will be scanned
+nmap -n -v -sL 10.10.0-255.101-125
