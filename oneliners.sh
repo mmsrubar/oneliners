@@ -61,3 +61,21 @@ sudo nmap -PS22,80,443 -sn MACHINE_IP/30
 sudo nmap -PA22,80,443 -sn MACHINE_IP/30
 # nmap: UDP Ping Scan
 sudo nmap -PU53,161,162 -sn MACHINE_IP/30
+# nmap: -F for faster then usual scan (less ports)
+nmap -v -F -sT 10.10.166.115
+
+
+# find: find executable files
+find / -perm a=x
+# find:  find all files for user “frank” under “/home”
+find /home -user frank
+# find: find files that were modified in the last 10 days
+find / -mtime 10
+# find: find files that were accessed in the last 10 day
+find / -atime 10
+# find: find files changed within the last hour (60 minutes)
+find / -cmin -60
+# find: find files accesses within the last hour (60 minutes)
+find / -amin -60
+# find: find files with a 50 MB size
+find / -size 50M
