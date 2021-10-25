@@ -45,3 +45,19 @@ smbget -R smb://10.10.15.147/anonymous
 
 # nmap: -sL will simply list targets that will be scanned
 nmap -n -v -sL 10.10.0-255.101-125
+
+
+# nmap: ARP scan
+sudo nmap -PR -sn MACHINE_IP/24
+# nmap: ICMP Echo Scan
+sudo nmap -PE -sn MACHINE_IP/24
+# nmap: ICMP Timestamp Scan
+sudo nmap -PP -sn MACHINE_IP/24
+# nmap: ICMP Address Mask Scan
+sudo nmap -PM -sn MACHINE_IP/24
+# nmap: TCP SYN Ping Scan
+sudo nmap -PS22,80,443 -sn MACHINE_IP/30
+# nmap: TCP ACK Ping Scan
+sudo nmap -PA22,80,443 -sn MACHINE_IP/30
+# nmap: UDP Ping Scan
+sudo nmap -PU53,161,162 -sn MACHINE_IP/30
