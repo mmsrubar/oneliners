@@ -79,3 +79,6 @@ find / -cmin -60
 find / -amin -60
 # find: find files with a 50 MB size
 find / -size 50M
+
+# do non-greedy search for a patter with grep
+grep -P 'hostname":".*?"' file
