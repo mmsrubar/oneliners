@@ -79,16 +79,19 @@ find / -cmin -60
 find / -amin -60
 # find: find files with a 50 MB size
 find / -size 50M
-<<<<<<< HEAD
 # use iname to find case-insensitive file name pattern
 find . -iname "File*"
 # search for files with modified time newer then ...
 find . -type f -newermt '11/19/2021 21:00:00'
 # find files modified between 09/12/2013 and 09/14/2013
 find / -type f -newermt 2013-09-12 ! -newermt 2013-09-14
+# find all files with SUID bit and execute ls for each file
+find / -perm -u=s -type f -exec ls -l {} \; 2> /dev/null
 
 # enrypt a file with symmetric AES-256 algorithm
 gpg --cipher-algo AES-256 --symmetric secret.txt
+# decrypt a gpg file
+gpg secret.txt.gpg
 
 # do non-greedy search for a patter with grep
 grep -P 'hostname":".*?"' file
