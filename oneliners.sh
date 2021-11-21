@@ -95,6 +95,8 @@ gpg secret.txt.gpg
 
 # do non-greedy search for a patter with grep
 grep -P 'hostname":".*?"' file
+# grep an IP address in all files in current dir
+grep -E '[1-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}' *
 
 # create password hash you can use in /etc/passwd
 mkpasswd --method=SHA-512 --stdin
