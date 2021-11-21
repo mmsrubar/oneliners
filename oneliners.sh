@@ -95,3 +95,9 @@ gpg secret.txt.gpg
 
 # do non-greedy search for a patter with grep
 grep -P 'hostname":".*?"' file
+
+# create password hash you can use in /etc/passwd
+mkpasswd --method=SHA-512 --stdin
+
+# get only lines that are 7 chars long
+awk 'length==7' rockyou.txt  > pass-len7.txt
