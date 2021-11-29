@@ -40,6 +40,8 @@ net user
 
 # smbclient: Connect share WorkSharing without login
 smbclient //192.168.193.211/WorkSharing -N
+# smbclient: A different way to connect to an SMB share
+smbclient \\\\172.16.6.130\\tools
 # smbget: Recursively download files from an SMB share
 smbget -R smb://10.10.15.147/anonymous
 
