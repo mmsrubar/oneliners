@@ -82,3 +82,9 @@ find / -size 50M
 
 # do non-greedy search for a patter with grep
 grep -P 'hostname":".*?"' file
+
+# get only TLD from a file with domains
+rev uniq-names | cut -d'.' -f1-2 | rev
+
+# Interactive database shell (skwish)
+sqsh -S 10.10.84.239 -U sa -P t7uLKzddQzVjVFJp
