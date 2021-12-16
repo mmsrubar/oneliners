@@ -112,3 +112,6 @@ mkpasswd --method=SHA-512 --stdin
 
 # get only lines that are 7 chars long
 awk 'length==7' rockyou.txt  > pass-len7.txt
+
+# show NFS mount points
+showmount -e 10.10.70.21
